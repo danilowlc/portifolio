@@ -8,14 +8,19 @@ export const Decription = styled(P)`
 export const ThemeButton = styled.button`
   padding: 8px;
   border-radius: 12px;
-  color: #eee;
+  color: ${(props) => props.theme.backgroudColor};
   font-size: 10px;
   font-weight: bold;
-  background-color: #282a35;
+  background-color: ${(props) => props.theme.mainColor};
   cursor: pointer;
 `
 export const SidebarContainer = styled.div`
   position: sticky;
   left: 0;
   top: 80px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
 `

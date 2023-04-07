@@ -3,7 +3,11 @@ import ProfilePhoto from '../../components/Avatar'
 import Paragraph from '../../components/Paragraph'
 import { Decription, ThemeButton, SidebarContainer } from './styles'
 
-const Sidebar = () => (
+type Props = {
+  changeTheme: () => void
+}
+
+const Sidebar = (props: Props) => (
   <aside>
     <SidebarContainer>
       <ProfilePhoto />
@@ -14,7 +18,7 @@ const Sidebar = () => (
       <Decription fontSize={12} tipo="principal">
         Python Developer
       </Decription>
-      <ThemeButton>Trocar Tema</ThemeButton>
+      <ThemeButton onClick={props.changeTheme}>Trocar Tema</ThemeButton>
     </SidebarContainer>
   </aside>
 )
